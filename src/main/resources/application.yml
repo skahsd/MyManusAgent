@@ -1,0 +1,21 @@
+server:
+  port: 18081
+spring:
+  application:
+    name: my-manus
+
+agent-model:
+  base-url: https://ark.cn-beijing.volces.com/api/
+  api-key: ${VOLCES_API_KEY}
+  model-name: deepseek-v3-250324
+  completions-path: /v3/chat/completions
+  stream: false
+plan-model:
+  base-url: https://ark.cn-beijing.volces.com/api/
+  api-key: ${VOLCES_API_KEY}
+  model-name: deepseek-r1-250120
+  completions-path: /v3/chat/completions
+
+file:
+  base: F:\\tmp\\my-manus\\
+  domain: http://localhost:18081
