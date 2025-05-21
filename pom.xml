@@ -2,25 +2,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 项目模型版本 -->
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 父项目配置，继承 Spring Boot 的默认配置 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.3</version>
     </parent>
 
+    <!-- 项目的坐标信息 -->
     <groupId>cn.itcast</groupId>
     <artifactId>my-manus</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- 自定义属性配置 -->
     <properties>
+        <!-- Spring AI 版本 -->
         <spring-ai.version>1.0.0-M8</spring-ai.version>
+        <!-- Java 编译版本 -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <!-- 项目编码格式 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- 依赖管理：统一管理依赖版本 -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -33,60 +41,74 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 项目实际依赖 -->
     <dependencies>
+        <!-- Spring Boot 测试模块 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Web 开发支持 -->
         <dependency>
-            <groupId>
-                org.springframework.boot</groupId>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- WebSocket 支持 -->
         <dependency>
-            <groupId>
-                org.springframework.boot</groupId>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
+
+        <!-- OpenAI 集成支持 -->
         <dependency>
-            <groupId>
-                org.springframework.ai</groupId>
+            <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-openai</artifactId>
         </dependency>
+
+        <!-- MCP 协议客户端支持 -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-mcp-client</artifactId>
         </dependency>
 
+        <!-- Lombok 简化实体类开发 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!-- Hutool 工具类库 -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.8.36</version>
         </dependency>
 
+        <!-- Playwright 浏览器自动化工具 -->
         <dependency>
-            <groupId>
-                com.microsoft.playwright</groupId>
+            <groupId>com.microsoft.playwright</groupId>
             <artifactId>playwright</artifactId>
             <version>1.51.0</version>
         </dependency>
 
+        <!-- Jsoup HTML 解析库 -->
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>1.17.2</version>
         </dependency>
+
+        <!-- Markdown 转换工具 -->
         <dependency>
             <groupId>com.vladsch.flexmark</groupId>
             <artifactId>flexmark-html2md-converter</artifactId>
             <version>0.64.0</version>
         </dependency>
+
+        <!-- Apache Tika 核心库，用于文档解析 -->
         <dependency>
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
@@ -94,8 +116,10 @@
         </dependency>
     </dependencies>
 
+    <!-- 构建插件 -->
     <build>
         <plugins>
+            <!-- Spring Boot Maven 插件，用于打包和运行 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
