@@ -20,7 +20,7 @@
     <!-- 自定义属性配置 -->
     <properties>
         <!-- Spring AI 版本 -->
-        <spring-ai.version>1.0.0-M8</spring-ai.version>
+        <spring-ai.version>1.0.0</spring-ai.version>
         <!-- Java 编译版本 -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
