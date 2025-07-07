@@ -1,7 +1,7 @@
 package cn.itcast.manus.config;
 
+import cn.hutool.core.util.StrUtil;
 import lombok.Data;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.model.SimpleApiKey;
 import org.springframework.ai.openai.OpenAiChatModel;
@@ -67,7 +67,7 @@ public class ModelConfig {
 
         // 如果 completionsPath 存在且非空，则设置到 OpenAiApi 构建器中
         Optional.ofNullable(cfg.getCompletionsPath())
-                .filter(StringUtils::isNotBlank)
+                .filter(StrUtil::isNotBlank)
                 .ifPresent(bd::completionsPath);
 
         // 构建 OpenAiChatOptions，指定模型名称
