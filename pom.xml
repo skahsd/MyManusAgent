@@ -114,6 +114,11 @@
             <artifactId>tika-core</artifactId>
             <version>3.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>me.paulschwarz</groupId>
+            <artifactId>spring-dotenv</artifactId>
+            <version>4.0.0</version>
+        </dependency>
     </dependencies>
 
     <!-- 构建插件 -->
