@@ -6,13 +6,13 @@ spring:
 
 agent-model:
   base-url: https://ark.cn-beijing.volces.com/api
-  api-key: "ark-75eb0ebb-12e4-45dd-8d33-3b4da4fc9a30-c679c"
+  api-key: {MY_API_KEY}
   model-name: deepseek-v4-pro-260425
   completions-path: /v3/chat/completions
   stream: false
 plan-model:
   base-url: https://ark.cn-beijing.volces.com/api
-  api-key: "ark-75eb0ebb-12e4-45dd-8d33-3b4da4fc9a30-c679c"
+  api-key: {MY_API_KEY}
   model-name: deepseek-v4-pro-260425
   completions-path: /v3/chat/completions
 
