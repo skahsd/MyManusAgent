@@ -114,10 +114,11 @@
             <artifactId>tika-core</artifactId>
             <version>3.1.0</version>
         </dependency>
+        <!-- Playwright 浏览器自动化工具 -->
         <dependency>
-            <groupId>me.paulschwarz</groupId>
-            <artifactId>spring-dotenv</artifactId>
-            <version>4.0.0</version>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>1.51.0</version>
         </dependency>
     </dependencies>
 

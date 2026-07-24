@@ -5,6 +5,7 @@
 # IntelliJ project files
 .idea
 .env
+my-manus-vue
 *.iml
 out
 gen

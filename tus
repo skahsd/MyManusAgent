@@ -1,0 +1,11 @@
+agent-model:
+  base-url: https://ark.cn-beijing.volces.com/api/
+  api-key: "sk-85d094333e2c489ea0cb67fba6f0fdf1"
+  model-name: deepseek-v3-250324
+  completions-path: /v3/chat/completions
+  stream: false
+plan-model:
+  base-url: https://ark.cn-beijing.volces.com/api/
+  api-key: "sk-85d094333e2c489ea0cb67fba6f0fdf1"
+  model-name: deepseek-r1-250120
+  completions-path: /v3/chat/completions
