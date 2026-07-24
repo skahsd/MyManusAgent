@@ -45,6 +45,56 @@
 | Jsoup + Flexmark | HTML 解析与 Markdown 转换 |
 | Hutool 5.8 | 通用工具库 |
 
+## 快速开始
+
+### 环境要求
+
+- JDK 17+
+- Maven 3.6+
+- Playwright 浏览器（首次运行自动下载 Chromium）
+
+### 配置
+
+在项目根目录创建 `.env` 文件：
+
+```env
+VOLCES_API_KEY=你的API密钥
+```
+
+编辑 `src/main/resources/application.yml` 配置模型：
+
+```yaml
+agent-model:
+  base-url: https://ark.cn-beijing.volces.com/api/
+  api-key: ${VOLCES_API_KEY}
+  model-name: deepseek-v3-250324
+  completions-path: /v3/chat/completions
+  stream: false
+
+plan-model:
+  base-url: https://ark.cn-beijing.volces.com/api/
+  api-key: ${VOLCES_API_KEY}
+  model-name: deepseek-r1-250120
+  completions-path: /v3/chat/completions
+```
+
+### 启动
+
+```bash
+mvn spring-boot:run
+```
+
+服务启动在 `http://localhost:18081`，通过 WebSocket 端点 `/ws` 连接，发送消息到 `/enhanced-dialog`。
+
+### 前端
+
+项目包含 Vue 前端（`my-manus-vue/` 目录），支持对话式交互：
+
+```bash
+cd my-manus-vue
+npm install
+npm run dev
+```
 
 ## 项目结构
 
