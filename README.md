@@ -99,7 +99,7 @@ npm run dev
 ## 项目结构
 
 ```
-src/main/java/cn/itcast/manus/
+src/main/java/cn/mymanus/manus/
 ├── agent/
 │   ├── Agent.java                  # Agent 接口
 │   ├── BaseAgent.java              # 基础抽象类
