@@ -13,9 +13,9 @@ agent-model:
 plan-model:
   base-url: https://ark.cn-beijing.volces.com/api
   api-key: {MY_API_KEY}
-  model-name: deepseek-v4-pro-260425
+  model-name: deepseek-v4-pro-260425C
   completions-path: /v3/chat/completions
 
 file:
-  base: F:\\tmp\\my-manus\\
+  base: C:\\tmp\\my-manus\\
   domain: http://localhost:18081
